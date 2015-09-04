@@ -11,6 +11,19 @@ body
 	font-family: $proxima
 
 
+.hidden
+	display: none
+
+.overlay
+	z-index: 999
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: black
+	opacity: 0.7
+
 
 // header part
 
@@ -423,18 +436,28 @@ input.header__search-form
 
 .popup
 	+ca
-	padding: 20px
-	max-width: 30%
+	padding: 40px
+	max-width: 400px
 	font-family: $proxima
 	background: white
 	-webkit-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.75);
+	z-index: 9999
 	p.error__message
 		text-align: center
 		font-size: 40px
+		font-weight: bold
 	p.error__code
-		font-size: 16px
+		font-size: 18px
 		text-align: center
+		line-height: 42px
 	p.error__description
 		font-size: 16px
+		text-align: center
+	&__close
+		float: right
+		position: absolute
+		right: -50px
+		top: -50px
+

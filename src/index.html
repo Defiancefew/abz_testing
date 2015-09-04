@@ -31,16 +31,17 @@
   </head>
 
   <body>
+    <div class="overlay hidden"></div>
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
-          <a href="#"><img src="./img/logo_image.svg" alt="logo"></a>
+          <a href="#"><img src="./img/header_logotype.svg" alt="Header logo"></a>
         </div>
         <div class="header__search">
           <input placeholder="Company name" class="header__search-form">
         </div>
         <div class="login"><a href="#"><i class="login__message"></i></a><a href="#"><i class="login__notifications"></i></a>
-          <a href="#" class="login__link"><img src="img/login_icon.png" class="login__userpic"></a><a href="#" class="login__username">Maximillian Beekeeper</a></div>
+          <a href="#" class="login__link"><img src="img/login_icon.png" alt="User account picture" class="login__userpic"></a><a href="#" class="login__username">Maximillian Beekeepergs</a></div>
       </div>
     </header>
     <main class="main">
@@ -98,8 +99,8 @@
               <div class="item__image-wrap"><img src="{{date.icon}}" alt="{{date.title}}"></div><a href="#" class="item__name">{{date.title}}</a></div>
           </div>
         </div>
-        <div ng-controller="MainCtrl" class="popup">
-          <a href="#" class="popup__close"></a>
+        <div ng-controller="MainCtrl" class="popup hidden">
+          <a href="#" class="popup__close"><img src="img/cross.svg"></a>
           <p class="error__message">{{tokenMessage.message}}</p>
           <p class="error__code">Code error : {{tokenMessage.code}}</p>
           <p class="error__description">{{tokenMessage.description}}</p>

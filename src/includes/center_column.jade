@@ -8,8 +8,9 @@
 				img(src="{{date.icon}}" alt="{{date.title}}")
 			a.item__name(href="#") {{date.title}}
 
-.popup(ng-controller="MainCtrl")
+.popup.hidden(ng-controller="MainCtrl")
 	a(href="#").popup__close
+		img(src="img/cross.svg")
 	p.error__message {{tokenMessage.message}}
 	p.error__code Code error : {{tokenMessage.code}}
 	p.error__description {{tokenMessage.description}}
