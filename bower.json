@@ -1,16 +1,11 @@
 {
-  "name": "app",
+  "name": "abz_testing",
   "version": "0.0.0",
+  "homepage": "https://github.com/Defiancefew/abz_testing",
   "authors": [
-    "Defiancefew"
-  ],
-  "description": "Description",
-  "main": "main",
-  "keywords": [
-    "keys"
+    "Defiancefew <Severancepwns@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "home",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,39 +16,6 @@
   ],
   "dependencies": {
     "angular": "~1.4.5",
-    "backbone": "~1.2.2",
-    "gsap": "~1.17.0",
-    "handlebars": "~4.0.0",
-    "jquery.stellar": "~0.6.2",
-    "normalize.css": "~3.0.3",
-    "OwlCarousel2": "~2.0.0-beta.3",
-    "react": "~0.13.3",
-    "scrollmagic": "~2.0.5",
-    "underscore": "~1.8.3"
-  },
-  "overrides": {
-    "OwlCarousel2": {
-      "main": [
-        "./dist/assets/owl.theme.default.css",
-        "./dist/assets/owl.carousel.min.css",
-        "./dist/owl.carousel.js"
-      ],
-      "dependencies": {}
-    },
-    "jquery.stellar": {
-      "main": "./jquery.stellar.js",
-      "dependencies": {}
-    },
-    "gsap": {
-      "main": "./src/uncompressed/TweenMax.js",
-      "dependencies": {}
-    },
-    "scrollmagic": {
-      "main": [
-        "scrollmagic/uncompressed/ScrollMagic.js",
-        "scrollmagic/uncompressed/plugins/animation.gsap.js"
-      ],
-      "dependencies": {}
-    }
+    "angular-resource": "~1.4.5"
   }
 }

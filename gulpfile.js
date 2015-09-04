@@ -99,7 +99,7 @@ gulp.task("spritesmith", function () {
 		imgPath: "../img/spritesheet.png",
 		cssName: "../sass/vendor/sprites.css",
 		algorithm: "top-down",
-		padding: 1
+		padding: 2
 	}));
 	return spriteData.pipe(gulp.dest("src/img"));
 });

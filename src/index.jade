@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en" ng-app="app")
 	head
 		meta(charset="UTF-8")
 		meta(name="description" content="")
@@ -16,82 +16,43 @@ html(lang="en")
 		<![endif]-->
 		//build:css css/vendor.min.css
 		//bower:css
-		link(rel='stylesheet', href='lib/normalize.css/normalize.css')
-		link(rel='stylesheet', href='lib/OwlCarousel2/dist/assets/owl.theme.default.css')
-		link(rel='stylesheet', href='lib/OwlCarousel2/dist/assets/owl.carousel.min.css')
 		//endbower
 		//endbuild
-
 		link(rel="stylesheet", href="css/header.min.css")
+		link(rel="stylesheet", href="css/style.min.css")
+		link(rel="stylesheet" href="css/fonts.min.css")
 		style.
 			/*
 			 Insert your header styles here
 			 */
-
-		script.
-			!function(a){"use strict";function b(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function c(a){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===a}function d(){if(window.localStorage&&window.XMLHttpRequest)if(c(a))e(localStorage.font_css_cache);else{var f=new XMLHttpRequest;f.open("GET",a,!0),b(f,"load",function(){4===f.readyState&&(e(f.responseText),localStorage.font_css_cache=f.responseText,localStorage.font_css_cache_file=a)}),f.send()}else{var d=document.createElement("link");d.href=a,d.rel="stylesheet",d.type="text/css",document.getElementsByTagName("head")[0].appendChild(d),document.cookie="font_css_cache"}}function e(a){var b=document.createElement("style");b.innerHTML=a,document.getElementsByTagName("head")[0].appendChild(b)}window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?d():b(window,"load",d)}("../css/fonts.min.css");
-
+			
+			/*	Check fonts in users local storage, otherwise download it from server */
+			
+		//- script.
+		//- 	!function(a){"use strict";function b(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function c(a){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===a}function d(){if(window.localStorage&&window.XMLHttpRequest)if(c(a))e(localStorage.font_css_cache);else{var f=new XMLHttpRequest;f.open("GET",a,!0),b(f,"load",function(){4===f.readyState&&(e(f.responseText),localStorage.font_css_cache=f.responseText,localStorage.font_css_cache_file=a)}),f.send()}else{var d=document.createElement("link");d.href=a,d.rel="stylesheet",d.type="text/css",document.getElementsByTagName("head")[0].appendChild(d),document.cookie="font_css_cache"}}function e(a){var b=document.createElement("style");b.innerHTML=a,document.getElementsByTagName("head")[0].appendChild(b)}window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?d():b(window,"load",d)}("../css/fonts.min.css");
 		script(src="lib/modernizr/modernizr.js")
 
-		title Title
+		title Denteez
 		noscript
 			link(rel="stylesheet" href="css/fonts.min.css")
 			link(rel="stylesheet" href="css/style.min.css")
 	body
-		<!--[if lt IE 8]>
-		p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-		<![endif]-->
 
+		include includes/header.jade
+		include includes/main.jade
 
-
-
-
-		include includes/blank.jade
-
-
-
-
-
-
-
-
-
-
-		script.
-			var ms=document.createElement("link");ms.rel="stylesheet";
-					ms.href="css/style.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-		script.
-			window.jQuery || document.write('<script src="lib/jquery/dist/jquery.js"><\/script>');
+		//- script.
+		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
+		//- 			ms.href="css/style.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+		//- script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+		//- script.
+		//- 	window.jQuery || document.write('<script src="lib/jquery/dist/jquery.js"><\/script>');
 
 		//build:js js/vendor.min.js
 		//bower:js
-		script(src='lib/underscore/underscore.js')
-		script(src='lib/backbone/backbone.js')
-		script(src='lib/gsap/src/uncompressed/TweenMax.js')
-		script(src='lib/handlebars/handlebars.js')
-		script(src='lib/jquery.stellar/jquery.stellar.js')
-		script(src='lib/OwlCarousel2/dist/owl.carousel.js')
-		script(src='lib/react/react.js')
-		script(src='lib/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js')
-		script(src='lib/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js')
+		script(src='lib/angular/angular.js')
 		//endbower
 		//endbuild
 		// build:js js/app.min.js
 		script(src="js/app.js")
 		// endbuild
-		//- script(type="text/x-handlebars-template" id="template-article")
-		//- 	article
-		//- 		{{#each blocks}}
-		//- 		.title {{title}}
-		//- 		.description {{description}}
-		//- 		a.link(href="{{link}}") Подробнее
-		//- 		{{/each}}
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		script.
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-						function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-						e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-						e.src='https://www.google-analytics.com/analytics.js';
-						r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-						ga('create','UA-XXXXX-X','auto');ga('send','pageview');

@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "data": [
+  {
+    "id": 1,
+    "icon" : "http://test25.abz.dn.ua/img/service-others.png",
+    "title": "Accountancy"
+  },
+  {
+    "id": 2,
+    "icon" : "http://test25.abz.dn.ua/img/service-repairs.png",
+    "title": "Associations"
+  },
+  {
+    "id": 3,
+    "icon" : "http://test25.abz.dn.ua/img/service-marketing.png",
+    "title": "Buy/Sell Dental Practice"
+  },
+  {
+    "id": 4,
+    "icon" : "http://test25.abz.dn.ua/img/service-repairs.png",
+    "title": "Cleaning Agencies"
+  },
+  {
+    "id": 5,
+    "icon" : "http://test25.abz.dn.ua/img/service-others.png",
+    "title": "Clinical Waste Collection"
+  },
+  {
+    "id": 6,
+    "icon" : "http://test25.abz.dn.ua/img/service-marketing.png",
+    "title": "Computer Service"
+  }
+]
+}

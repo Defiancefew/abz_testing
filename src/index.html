@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" ng-app="app">
 
   <head>
     <meta charset="UTF-8">
@@ -11,61 +11,19 @@
     <!--[if lt IE 9]><script src="lib/html5shiv/es5-shim.min.js"></script><script src="lib/html5shiv/html5shiv.min.js"></script><script src="lib/html5shiv/html5shiv-printshiv.min.js"></script><script src="lib/respond/respond.min.js"></script><![endif]-->
     <!--build:css css/vendor.min.css-->
     <!--bower:css-->
-    <link rel="stylesheet" href="lib/normalize.css/normalize.css">
-    <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.theme.default.css">
-    <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.carousel.min.css">
     <!--endbower-->
     <!--endbuild-->
     <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
     <style>
       /*
  Insert your header styles here
  */
+      /*	Check fonts in users local storage, otherwise download it from server */
     </style>
-    <script>
-      ! function(a)
-      {
-        "use strict";
-
-        function b(a, b, c)
-        {
-          a.addEventListener ? a.addEventListener(b, c, !1) : a.attachEvent && a.attachEvent("on" + b, c)
-        }
-
-        function c(a)
-        {
-          return window.localStorage && localStorage.font_css_cache && localStorage.font_css_cache_file === a
-        }
-
-        function d()
-        {
-          if (window.localStorage && window.XMLHttpRequest)
-            if (c(a)) e(localStorage.font_css_cache);
-            else
-            {
-              var f = new XMLHttpRequest;
-              f.open("GET", a, !0), b(f, "load", function()
-              {
-                4 === f.readyState && (e(f.responseText), localStorage.font_css_cache = f.responseText, localStorage.font_css_cache_file = a)
-              }), f.send()
-            }
-          else
-          {
-            var d = document.createElement("link");
-            d.href = a, d.rel = "stylesheet", d.type = "text/css", document.getElementsByTagName("head")[0].appendChild(d), document.cookie = "font_css_cache"
-          }
-        }
-
-        function e(a)
-        {
-          var b = document.createElement("style");
-          b.innerHTML = a, document.getElementsByTagName("head")[0].appendChild(b)
-        }
-        window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? d() : b(window, "load", d)
-      }("../css/fonts.min.css");
-    </script>
     <script src="lib/modernizr/modernizr.js"></script>
-    <title>Title</title>
+    <title>Denteez</title>
     <noscript>
       <link rel="stylesheet" href="css/fonts.min.css">
       <link rel="stylesheet" href="css/style.min.css">
@@ -73,52 +31,151 @@
   </head>
 
   <body>
-    <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
-    <div id="example"></div>
-    <script>
-      var ms = document.createElement("link");
-      ms.rel = "stylesheet";
-      ms.href = "css/style.min.css";
-      document.getElementsByTagName("head")[0].appendChild(ms);
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="lib/jquery/dist/jquery.js"><\/script>');
-    </script>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href="#"><img src="./img/logo_image.svg" alt="logo"></a>
+        </div>
+        <div class="header__search">
+          <input placeholder="Company name" class="header__search-form">
+        </div>
+        <div class="login"><a href="#"><i class="login__message"></i></a><a href="#"><i class="login__notifications"></i></a>
+          <a href="#" class="login__link"><img src="img/login_icon.png" class="login__userpic"></a><a href="#" class="login__username">Maximillian Beekeeper</a></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__wrapper">
+        <div class="main__left-col">
+          <div class="left-col__menu">
+            <ul>
+              <li class="icon__feed"><a href="#">Feed</a></li>
+              <li class="icon__ask"><a href="#">Ask a Colleague</a></li>
+              <li class="icon__companies"><a href="#">Companies</a></li>
+              <li class="icon__service"><a href="#">Service Directory</a></li>
+            </ul>
+          </div>
+          <div class="left-col__advertisment">
+            <h5 class="advertisment__heading">Advertisment</h5>
+            <a href="#"><img src="img/advertisment1.jpg" alt="advertisment-link"><a href="#" class="advertisment__subtext">Ads By Denteez.com</a></a>
+          </div>
+          <div class="companies">
+            <div class="companies__links-wrapper">
+              <h5 class="companies__heading">Featured Companies</h5><a href="#" class="companies__see-all">See all</a></div>
+            <ul class="companies__list">
+              <li class="companies__item">
+                <div class="companies__image-wrapper"><img src="img/company1.jpg" alt="company-photo"></div>
+                <div class="companies__text-wrapper">
+                  <p class="companies__name">Company Name</p>
+                  <p class="companies__position">Manufacturer</p>
+                  <p class="companies__location">Belgrade, Serbia</p><a href="#" class="companies__follow">Follow Now</a></div>
+              </li>
+              <li class="companies__item">
+                <div class="companies__image-wrapper"><img src="img/company2.jpg" alt="company-photo"></div>
+                <div class="companies__text-wrapper">
+                  <p class="companies__name">Company Name</p>
+                  <p class="companies__position">Manufacturer</p>
+                  <p class="companies__location">Belgrade, Serbia</p><a href="#" class="companies__follow">Follow Now</a></div>
+              </li>
+              <li class="companies__item">
+                <div class="companies__image-wrapper"><img src="img/company3.jpg" alt="company-photo"></div>
+                <div class="companies__text-wrapper">
+                  <p class="companies__name">Company Name</p>
+                  <p class="companies__position">Manufacturer</p>
+                  <p class="companies__location">Belgrade, Serbia</p><a href="#" class="companies__follow">Follow Now</a></div>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <p class="copyright__year">Denteez Copyright 2015</p><a href="#" class="copyright__terms">Terms of use</a><a href="#" class="copyright__policy">Privacy policy</a></div>
+        </div>
+        <div class="main__center">
+          <div class="main__menu-wrapper">
+            <h2 class="service__directory">Service directory</h2>
+            <button class="service__add">Add new service</button>
+          </div>
+          <div ng-controller="MainCtrl" class="item__wrapper">
+            <div ng-repeat="date in dataobj.data" class="item__block">
+              <div class="item__image-wrap"><img src="{{date.icon}}" alt="{{date.title}}"></div><a href="#" class="item__name">{{date.title}}</a></div>
+          </div>
+        </div>
+        <div ng-controller="MainCtrl" class="popup">
+          <a href="#" class="popup__close"></a>
+          <p class="error__message">{{tokenMessage.message}}</p>
+          <p class="error__code">Code error : {{tokenMessage.code}}</p>
+          <p class="error__description">{{tokenMessage.description}}</p>
+        </div>
+        <div class="main__right-col">
+          <div class="people__links-wrapper">
+            <h5 class="people__heading">People you may know</h5><a href="#" class="people__see-all">See all</a></div>
+          <ul class="people__list">
+            <li class="people__tile">
+              <p class="people__name">Dennis Adams</p>
+              <div class="people__image-wrapper">
+                <a href="#"><img src="img/dennis.jpg" alt="people-photo"></a>
+              </div>
+              <div class="people__text-wrapper">
+                <p class="people__position">Dentist (Practice Owner)</p>
+                <p class="people__location">London, England</p><a href="#" class="people__follow">Add Friend</a></div>
+            </li>
+            <li class="people__tile">
+              <p class="people__name">Mary Carpenter</p>
+              <div class="people__image-wrapper">
+                <a href="#"><img src="img/mary.jpg" alt="people-photo"></a>
+              </div>
+              <div class="people__text-wrapper">
+                <p class="people__position">Dentist (Practice Owner)</p>
+                <p class="people__location">Belgrade, Serbia</p><a href="#" class="people__follow">Add Friend</a></div>
+            </li>
+            <li class="people__tile">
+              <p class="people__name">Danielle Salazar</p>
+              <div class="people__image-wrapper">
+                <a href="#"><img src="img/danielle.jpg" alt="people-photo"></a>
+              </div>
+              <div class="people__text-wrapper">
+                <p class="people__position">Dentist (Practice Owner)</p>
+                <p class="people__location">Paris, France</p><a href="#" class="people__follow">Add Friend</a></div>
+            </li>
+          </ul>
+          <div class="products">
+            <div class="products__links-wrapper">
+              <h5 class="products__heading">Featured Products</h5><a href="#" class="products__see-all">See all</a></div>
+            <ul class="products__list">
+              <li class="products__tile">
+                <p class="products__name">Product Name</p>
+                <div class="products__image-wrapper">
+                  <a href="#"><img src="img/product1.jpg" alt="products-photo"></a>
+                </div>
+                <div class="products-wrapper">
+                  <p class="products__position">Product Short Description. The quick brown fox jumps over the lazy dog.</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="products__list">
+              <li class="products__tile">
+                <p class="products__name">Product Name</p>
+                <div class="products__image-wrapper">
+                  <a href="#"><img src="img/product2.jpg" alt="products-photo"></a>
+                </div>
+                <div class="products-wrapper">
+                  <p class="products__position">Product Short Description. The quick brown fox jumps over the lazy dog.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="left-col__advertisment">
+            <h5 class="advertisment__heading">Advertisment</h5>
+            <a href="#"><img src="img/advertisment2.jpg" alt="advertisment-link"></a><a href="#" class="advertisment__subtext">Ads By Denteez.com</a></div>
+        </div>
+      </div>
+    </main>
     <!--build:js js/vendor.min.js-->
     <!--bower:js-->
-    <script src="lib/underscore/underscore.js"></script>
-    <script src="lib/backbone/backbone.js"></script>
-    <script src="lib/gsap/src/uncompressed/TweenMax.js"></script>
-    <script src="lib/handlebars/handlebars.js"></script>
-    <script src="lib/jquery.stellar/jquery.stellar.js"></script>
-    <script src="lib/OwlCarousel2/dist/owl.carousel.js"></script>
-    <script src="lib/react/react.js"></script>
-    <script src="lib/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-    <script src="lib/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="lib/angular/angular.js"></script>
     <!--endbower-->
     <!--endbuild-->
     <!-- build:js js/app.min.js-->
     <script src="js/app.js"></script>
     <!-- endbuild-->
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b, o, i, l, e, r)
-      {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] = function()
-        {
-          (b[l].q = b[l].q || []).push(arguments)
-        });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-      }(window, document, 'script', 'ga'));
-      ga('create', 'UA-XXXXX-X', 'auto');
-      ga('send', 'pageview');
-    </script>
   </body>
 
 </html>

@@ -1,0 +1,15 @@
+.main__center
+	.main__menu-wrapper
+		h2.service__directory Service directory
+		button.service__add Add new service
+	.item__wrapper(ng-controller="MainCtrl")
+		.item__block(ng-repeat="date in dataobj.data")
+			.item__image-wrap
+				img(src="{{date.icon}}" alt="{{date.title}}")
+			a.item__name(href="#") {{date.title}}
+
+.popup(ng-controller="MainCtrl")
+	a(href="#").popup__close
+	p.error__message {{tokenMessage.message}}
+	p.error__code Code error : {{tokenMessage.code}}
+	p.error__description {{tokenMessage.description}}
