@@ -1,17 +1,12 @@
-;(function () {
+(function () {
 
 var app = angular
 	.module('app', [])
-	.controller('MainCtrl', MainCtrl);
-
-function MainCtrl ($scope, $http) {
+	.controller('MainCtrl', ["$scope", "$http", function($scope, $http){
 
 $scope.dataobj = {};
-
 $http.defaults.headers.common['Authorization'] = "d7ceaa105ff77b29d59c8a3221820d6c1a6fd7d8";
-
 var url = 'http://504080.com/api/v1/services/categories';
-
 $http.get(url).success(function(data, status, headers, config) { 
 
 	$scope.dataobj = data;
@@ -27,6 +22,14 @@ $scope.tokenMessage = data.error;
 		}
 
 	});
+
+	}]);
+
+
+
+function MainCtrl ($scope, $http) {
+
+
 }
 
 var popup = document.querySelector(".popup"),

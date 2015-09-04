@@ -1,13 +1,18 @@
 .main__center
+
+	// SERVICE CONTROL BLOCK
 	.main__menu-wrapper
 		h2.service__directory Service directory
 		button.service__add Add new service
+
+	// SERVICE LIST BLOCK
 	.item__wrapper(ng-controller="MainCtrl")
 		.item__block(ng-repeat="date in dataobj.data")
 			.item__image-wrap
 				img(src="{{date.icon}}" alt="{{date.title}}")
 			a.item__name(href="#") {{date.title}}
 
+// ERROR POPUP BLOCK
 .popup.hidden(ng-controller="MainCtrl")
 	a(href="#").popup__close
 		img(src="img/cross.svg")

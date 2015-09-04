@@ -5,8 +5,8 @@ html(lang="en" ng-app="app")
 		meta(name="description" content="")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="shortcut icon" href="img/favicon.png")
-		link(rel="apple-touch-icon" href="img/apple-touch-icon.png")
+		//- link(rel="shortcut icon" href="img/favicon.png")
+		//- link(rel="apple-touch-icon" href="img/apple-touch-icon.png")
 		//- HTML 5 SHIV
 		<!--[if lt IE 9]>
 		script(src="lib/html5shiv/es5-shim.min.js")
@@ -18,40 +18,23 @@ html(lang="en" ng-app="app")
 		//bower:css
 		//endbower
 		//endbuild
-		link(rel="stylesheet", href="css/header.min.css")
+
+		//build:css css/style.min.css
 		link(rel="stylesheet", href="css/style.min.css")
 		link(rel="stylesheet" href="css/fonts.min.css")
-		style.
-			/*
-			 Insert your header styles here
-			 */
-			
-			/*	Check fonts in users local storage, otherwise download it from server */
-			
-		//- script.
-		//- 	!function(a){"use strict";function b(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function c(a){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===a}function d(){if(window.localStorage&&window.XMLHttpRequest)if(c(a))e(localStorage.font_css_cache);else{var f=new XMLHttpRequest;f.open("GET",a,!0),b(f,"load",function(){4===f.readyState&&(e(f.responseText),localStorage.font_css_cache=f.responseText,localStorage.font_css_cache_file=a)}),f.send()}else{var d=document.createElement("link");d.href=a,d.rel="stylesheet",d.type="text/css",document.getElementsByTagName("head")[0].appendChild(d),document.cookie="font_css_cache"}}function e(a){var b=document.createElement("style");b.innerHTML=a,document.getElementsByTagName("head")[0].appendChild(b)}window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?d():b(window,"load",d)}("../css/fonts.min.css");
-		script(src="lib/modernizr/modernizr.js")
+		//endbuild
 
 		title Denteez
-		noscript
-			link(rel="stylesheet" href="css/fonts.min.css")
-			link(rel="stylesheet" href="css/style.min.css")
+
 	body
 		.overlay.hidden
 		include includes/header.jade
 		include includes/main.jade
 
-		//- script.
-		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
-		//- 			ms.href="css/style.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
-		//- script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-		//- script.
-		//- 	window.jQuery || document.write('<script src="lib/jquery/dist/jquery.js"><\/script>');
-
 		//build:js js/vendor.min.js
 		//bower:js
+		script(src="lib/modernizr/modernizr.js")
 		script(src='lib/angular/angular.js')
-		script(src='lib/angular-resource/angular-resource.js')
 		//endbower
 		//endbuild
 		// build:js js/app.min.js

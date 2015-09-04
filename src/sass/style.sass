@@ -10,7 +10,6 @@ $proxima: "ProximaNova-Regular"
 body
 	font-family: $proxima
 
-
 .hidden
 	display: none
 
@@ -25,7 +24,7 @@ body
 	opacity: 0.7
 
 
-// header part
+// Header section
 
 
 
@@ -49,7 +48,7 @@ body
 
 
 
-// search part
+// Search section
 
 
 
@@ -78,9 +77,7 @@ input.header__search-form
 
 
 
-// login part
-
-
+// Login section
 
 .login
 	margin-top: 18px
@@ -108,13 +105,12 @@ input.header__search-form
 
 
 
-// main grid layout
+// Main grid layout
 
 
 .main__wrapper
 	max-width: 1440px
 	min-width: 970px
-	padding: 0 15px
 	margin: 10px auto 45px auto
 	display: flex
 	justify-content: space-between
@@ -127,7 +123,9 @@ input.header__search-form
 	flex-grow: 1
 	position: relative
 
-// center part
+
+
+// Center part section
 
 
 
@@ -163,7 +161,7 @@ input.header__search-form
 
 
 
-// service tiles
+// Service tiles section
 
 
 
@@ -176,8 +174,7 @@ input.header__search-form
 		padding: 15px
 		display: flex
 		flex-flow: row wrap
-		justify-content: space-between
-		+clearfix
+		justify-content: space-around
 	&__block
 		display: inline-block
 		margin-bottom: 20px
@@ -209,7 +206,7 @@ input.header__search-form
 
 
 
-// Left menu iconic list
+// Aside menu section
 
 
 
@@ -226,16 +223,19 @@ input.header__search-form
 			font-size: 14px
 			white-space: nowrap
 			border-bottom: 1px solid #e0e2e6
+			position: relative
 			a
 				text-decoration: none
 				color: #59606b
 				display: block
+				width: 100%
+				height: 100%
 				&:hover
 					text-decoration: underline
 
 
 
-// Silent placeholders for companies, people etc.
+// Silent placeholders for companies, people names etc.
 
 
 
@@ -277,7 +277,7 @@ input.header__search-form
 		text-decoration: underline
 
 
-// advertisment part
+// Advertisment section
 
 
 
@@ -293,9 +293,13 @@ input.header__search-form
 		text-decoration: none
 		color: lightgrey
 		font-size: 11px
+// quick fix for the advertisment section in the right column
+.main__right-col .left-col__advertisment
+	border-bottom: none
 
 
-// companies list
+
+// Companies section
 
 
 
@@ -331,7 +335,7 @@ input.header__search-form
 
 
 
-// copyright section
+// Copyright section
 
 
 
@@ -349,7 +353,7 @@ input.header__search-form
 
 
 
-// people part
+// People section
 
 
 
@@ -394,7 +398,7 @@ input.header__search-form
 		padding-bottom: 20px
 
 
-// products part
+// Products section
 
 .products
 	&__links-wrapper

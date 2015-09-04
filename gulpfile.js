@@ -48,6 +48,7 @@ gulp.task("babel", function () {
 
 gulp.task("wiredep", function(){
 	gulp.src("src/*.jade")
+	.pipe(plumber())
 	.pipe(wiredep({
 		ignorePath: /^(\.\.\/)*\.\./
 	}))
@@ -131,7 +132,9 @@ gulp.task("useref", function(){
 	var assets = useref.assets();
 	return gulp.src("src/*.html")
 	.pipe(assets)
-	.pipe(gulpif("*.js", uglify()))
+	.pipe(gulpif("*.js", uglify({options: {
+                mangle: false
+            }})))
 	.pipe(gulpif("*.css", minifyCss({compatibility: "ie8"})))
 	.pipe(assets.restore())
 	.pipe(useref())
@@ -194,7 +197,6 @@ gulp.task("copy", function(){
 gulp.task("default", ["browsersync","watch"], function () {
 		return gutil.log("Gulp is running!");
 	});
-
 
 gulp.task("sprite", function(){
 	runSequence("spritesmith", "rename", "sass");
