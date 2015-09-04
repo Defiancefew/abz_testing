@@ -22,15 +22,12 @@
     <div class="overlay hidden"></div>
     <header class="header">
       <div class="header__wrapper">
-        <!-- LOGOTYPE BLOCK-->
         <div class="header__logo">
           <a href="#"><img src="./img/header_logotype.svg" alt="Header logo"></a>
         </div>
-        <!-- SEARCH BLOCK-->
         <div class="header__search">
           <input placeholder="Company name" class="header__search-form">
         </div>
-        <!-- LOGIN BLOCK-->
         <div class="login"><a href="#"><i class="login__message"></i></a><a href="#"><i class="login__notifications"></i></a>
           <a href="#" class="login__link"><img src="img/login_icon.png" alt="User account picture" class="login__userpic"></a><a href="#" class="login__username">Maximillian Beekeepergs</a></div>
       </div>
@@ -38,7 +35,6 @@
     <main class="main">
       <div class="main__wrapper">
         <div class="main__left-col">
-          <!-- MENU BLOCK-->
           <div class="left-col__menu">
             <ul>
               <li class="icon__feed"><a href="#">Feed</a></li>
@@ -47,11 +43,9 @@
               <li class="icon__service"><a href="#">Service Directory</a></li>
             </ul>
           </div>
-          <!-- ADVERTISMENT BLOCK-->
           <div class="left-col__advertisment">
             <h5 class="advertisment__heading">Advertisment</h5>
             <a href="#"><img src="img/advertisment1.jpg" alt="advertisment-link"></a><a href="#" class="advertisment__subtext">Ads By Denteez.com</a></div>
-          <!-- COMPANIES BLOCK-->
           <div class="companies">
             <div class="companies__links-wrapper">
               <h5 class="companies__heading">Featured Companies</h5><a href="#" class="companies__see-all">See all</a></div>
@@ -79,23 +73,19 @@
               </li>
             </ul>
           </div>
-          <!-- COPYRIGHT BLOCK-->
           <div class="copyright">
             <p class="copyright__year">Denteez Copyright 2015</p><a href="#" class="copyright__terms">Terms of use</a><a href="#" class="copyright__policy">Privacy policy</a></div>
         </div>
         <div class="main__center">
-          <!-- SERVICE CONTROL BLOCK-->
           <div class="main__menu-wrapper">
             <h2 class="service__directory">Service directory</h2>
             <button class="service__add">Add new service</button>
           </div>
-          <!-- SERVICE LIST BLOCK-->
           <div data-ng-controller="MainCtrl" class="item__wrapper">
             <div data-ng-repeat="date in dataobj.data" class="item__block">
               <div class="item__image-wrap"><img src="{{date.icon}}" alt="{{date.title}}"></div><a href="#" class="item__name">{{date.title}}</a></div>
           </div>
         </div>
-        <!-- ERROR POPUP BLOCK-->
         <div data-ng-controller="MainCtrl" class="popup hidden">
           <a href="#" class="popup__close"><img src="img/cross.svg" alt="close popup"></a>
           <p class="error__message">{{tokenMessage.message}}</p>
@@ -103,7 +93,6 @@
           <p class="error__description">{{tokenMessage.description}}</p>
         </div>
         <div class="main__right-col">
-          <!-- FEATURED PEOPLE BLOCK-->
           <div class="people__links-wrapper">
             <h5 class="people__heading">People you may know</h5><a href="#" class="people__see-all">See all</a></div>
           <ul class="people__list">
@@ -135,7 +124,6 @@
                 <p class="people__location">Paris, France</p><a href="#" class="people__follow">Add Friend</a></div>
             </li>
           </ul>
-          <!-- FEATURED PRODUCTS BLOCK-->
           <div class="products">
             <div class="products__links-wrapper">
               <h5 class="products__heading">Featured Products</h5><a href="#" class="products__see-all">See all</a></div>
@@ -162,7 +150,6 @@
               </li>
             </ul>
           </div>
-          <!-- ADVERTISMENT BLOCK-->
           <div class="left-col__advertisment">
             <h5 class="advertisment__heading">Advertisment</h5>
             <a href="#"><img src="img/advertisment2.jpg" alt="advertisment-link"></a><a href="#" class="advertisment__subtext">Ads By Denteez.com</a></div>
