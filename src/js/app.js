@@ -8,7 +8,7 @@
 
 		$scope.dataobj = {};
 
-		// $http.defaults.headers.common['Authorization'] = "d7ceaa105ff77b29d59c8a3221820d6c1a6fd7d8";
+		$http.defaults.headers.common['Authorization'] = "d7ceaa105ff77b29d59c8a3221820d6c1a6fd7d8";
 
 		var url = 'http://504080.com/api/v1/services/categories';
 

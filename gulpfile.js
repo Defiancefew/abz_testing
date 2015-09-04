@@ -147,7 +147,7 @@ gulp.task("fonts", function(){
 
 
 gulp.task("imagemin", function () {
-		return gulp.src("src/img/*")
+		return gulp.src("src/img/**/*.*")
 				.pipe(plumber())
 				.pipe(imagemin({
 						progressive: true,
@@ -203,23 +203,3 @@ gulp.task("sprite", function(){
 gulp.task("dist", function(){
 runSequence("clean", "useref", "imagemin", "fonts", "copy");
 });
-
-
-gulp.task( "deploy", function() {
- 
-		var conn = ftp.create( {
-				host:     "ftp://defiancefew.zz.mu/",
-				user:     "u165293482",
-				password: "Defiance396",
-				parallel: 10,
-				log:      gutil.log
-		} );
- 
-		var globs = [
-				"dist/**/*"
-		];
-
-		return gulp.src( globs, { base: "dist/", buffer: false } )
-				.pipe( conn.dest( "/public_html" ) );
- 
-} );
