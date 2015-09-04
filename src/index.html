@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" data-ng-app="app">
 
   <head>
     <meta charset="UTF-8">
@@ -50,8 +50,7 @@
           <!-- ADVERTISMENT BLOCK-->
           <div class="left-col__advertisment">
             <h5 class="advertisment__heading">Advertisment</h5>
-            <a href="#"><img src="img/advertisment1.jpg" alt="advertisment-link"><a href="#" class="advertisment__subtext">Ads By Denteez.com</a></a>
-          </div>
+            <a href="#"><img src="img/advertisment1.jpg" alt="advertisment-link"></a><a href="#" class="advertisment__subtext">Ads By Denteez.com</a></div>
           <!-- COMPANIES BLOCK-->
           <div class="companies">
             <div class="companies__links-wrapper">
@@ -91,14 +90,14 @@
             <button class="service__add">Add new service</button>
           </div>
           <!-- SERVICE LIST BLOCK-->
-          <div ng-controller="MainCtrl" class="item__wrapper">
-            <div ng-repeat="date in dataobj.data" class="item__block">
+          <div data-ng-controller="MainCtrl" class="item__wrapper">
+            <div data-ng-repeat="date in dataobj.data" class="item__block">
               <div class="item__image-wrap"><img src="{{date.icon}}" alt="{{date.title}}"></div><a href="#" class="item__name">{{date.title}}</a></div>
           </div>
         </div>
         <!-- ERROR POPUP BLOCK-->
-        <div ng-controller="MainCtrl" class="popup hidden">
-          <a href="#" class="popup__close"><img src="img/cross.svg"></a>
+        <div data-ng-controller="MainCtrl" class="popup hidden">
+          <a href="#" class="popup__close"><img src="img/cross.svg" alt="close popup"></a>
           <p class="error__message">{{tokenMessage.message}}</p>
           <p class="error__code">Code error : {{tokenMessage.code}}</p>
           <p class="error__description">{{tokenMessage.description}}</p>
