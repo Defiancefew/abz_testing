@@ -179,7 +179,7 @@ input.header__search-form
 		display: inline-block
 		margin-bottom: 20px
 		transition: 0.25s
-		cursor: pointer
+		position: relative
 		&:hover .item__image-wrap
 			background-color: #f4f7fb
 		&:hover .item__name
@@ -203,6 +203,17 @@ input.header__search-form
 		font-family: $proxima
 		text-overflow: ellipsis
 		transition: 0.25s
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		z-index: 100
+		text-decoration: none
+
 
 
 
